@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}"><img width="25px" src="{{ url_for('static', filename='th.jpeg') }}" alt="Correcto"> Correcto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">ACCUEIL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('correcteur') }}">CORRECTEUR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <div class="Jumbotron jumbotron-fluid"style="background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/05/Water-Bubble-New-HD-Wallpaper-Free-620x388.jpg'); background-size: 100% auto; background-repeat: no-repeat; background-position: center; height: 550px;">
+        <div class="container mt-5">
+            <h1>Résultat</h1>
+
+    <div>
+        <h2>Texte original:</h2>
+        <p>{{ text }}</p>
+    </div>
+
+    {% if lang == 'en' %}
+    <div>
+        <h2>Texte corrigé en anglais:</h2>
+        <p>{{ corrected_text }}</p>
+    </div>
+    {% else %}
+    <div>
+        <h2>Texte corrigé:</h2>
+        <p>{{ corrected_text }}</p>
+    </div> 
+    {% endif %}
+
+    <form action="/" method="get">
+        <button type="submit">Retourner à la page précédente</button>
+    </form>
+        </div>
+    </div>
+        </div>
+      </div>
+            <hr>
+            <div class="container" style="height: 80px;">
+                <div>
+                    <ul style="list-style-type: none;">
+                        <li style="display: inline; margin-right: 20px;"><a href="{{ url_for('home') }}">Conditions générales d'utilisation</a></li>
+                        <li style="display: inline; margin-right: 20px;"><a href="{{ url_for('correcteur') }}">Correction (Français/Anglais)</a></li>
+                        <li style="display: inline;"><a href="{{ url_for('contact') }}">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                <div style="padding-bottom: 50px;"></div>
+            </div>
+    <footer class="bg-secondary text-white mt-5 pt-2 pb-5">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+        <div class="container-fluid">
+            <span>&copy;2023 | Correcteur.com</span>
+        </div>
+
+    </footer>
+</body>
+</html>

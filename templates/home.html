@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grammar Correction App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='webfonts/fa-solid-900.woff2') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='webfonts/fa-solid-900.ttf') }}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          <a class="navbar-brand" href="{{ url_for('home') }}"><img width="25px" src="{{ url_for('static', filename='th.jpeg') }}" alt="Correcto"> Correcto</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">ACCUEIL</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('correcteur') }}">CORRECTEUR</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('contact') }}">CONTACT</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <div class="Jumbotron jumbotron-fluid"style="background-image: url('https://www.goinformation.info/wp-content/uploads/correction-orthographe.jpg'); background-size: 100% auto; background-repeat: no-repeat; background-position: center; height: 550px;">
+      <div class="container text-center">
+        <h1 class=display-4>Correcteur d'orthographe</h1>
+        <p class="lead text-muted">
+          Écrivez sans souci d'orthographe grâce à notre correcteur magique ! 📝✨
+        </p>
+        <a href="{{ url_for('correcteur') }}" type="button" class="btn btn-primary">Correcteur</a>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg mb-4">
+          <img class="w-100" src="français-anglais.jpeg" alt="Imagee site">
+        </div>
+        <div class="col-lg text-justify">
+          <h2>Correcteur d'orthographe</h2>
+          <hr class="my-4">
+          <p class="lead">
+            Bienvenue sur notre outil de correction d'orthographe en ligne, votre allié incontournable pour des écrits impeccables ! Vous aspirez à la perfection linguistique dans vos textes, que ce soit pour vos études, votre travail ou votre communication personnelle ? Ne cherchez plus ! Notre correcteur d'orthographe intelligent est là pour vous. Grâce à sa technologie avancée, il détecte et corrige instantanément les fautes d'orthographe, de grammaire et de ponctuation, transformant vos écrits en véritables chefs-d'œuvre linguistiques.
+          </p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-lg-4 text-center">
+          <span class="fa-stack fa-5x">
+            <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+            <i class="fas fa-pencil-alt fa-stack-1x"></i>
+          </span>
+          <h2 class="display-6"> Améliorez votre écriture</h2>
+          <p>Confiez-nous vos textes et découvrez la différence que notre expertise peut apporter à vos écrits. Laissez votre créativité s'exprimer, nous nous occupons du reste.</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <span class="fa-stack fa-5x">
+            <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+            <i class="fas fa-check fa-stack-1x"></i>
+          </span>
+          <h2 class="display-6">Textes approuvés </h2>
+          <p>Des textes impeccables à chaque fois ! Notre service de validation orthographique garantit des écrits sans faute. Faites confiance à notre expertise pour des résultats parfaits</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <span class="fa-stack fa-5x">
+              <i class="fas fa-circle fa-stack-2x text-secondary"></i>
+              <i class="fas fa-smile fa-stack-1x"></i>
+          </span>
+          <h2 class="display-6">Des résultats à célébrer</h2>
+          <p>Satisfaction garantie ! Vos écrits impeccables vous feront sourire. Découvrez le plaisir d'une orthographe parfaite</p>
+      </div>
+        <div style="padding-bottom:50px ;"> </div>
+      </div>
+    </div>
+    <footer class="bg-secondary text-white mt-5 pt-2 pb-5">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+      <div class="container-fluid">
+        <span>&copy;2023|Correcteur.com</span>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
